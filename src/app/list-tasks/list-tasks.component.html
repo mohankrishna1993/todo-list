@@ -1,0 +1,23 @@
+<div class="task-list-container">
+<table class="task-table">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Task Name</th>
+      <th>Status</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let task of tasks">
+      <td>{{ task.date | date }}</td>
+      <td>{{ task.taskName }}</td>
+      <td>{{ task.status }}</td>
+      <td>
+        <button (click)="editTask(task)">Edit</button>
+        <button (click)="deleteTask(task)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>

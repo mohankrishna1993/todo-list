@@ -1,0 +1,27 @@
+
+
+  <div class="create-task-container">
+    <h2 class="text-center">Create To-Do Task</h2>
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="date">Date:</label>
+        <input type="date" id="date" [(ngModel)]="task.date" name="date" required>
+      </div>
+      <div class="form-group">
+        <label for="taskName">Task Name:</label>
+        <input type="text" id="taskName" [(ngModel)]="task.taskName" name="taskName" required>
+      </div>
+      <div class="form-group">
+        <label for="status">Status:</label>
+        <select id="status" [(ngModel)]="task.status" name="status" required>
+          <option value="active">Active</option>
+          <option value="inactive">Inactive</option>
+        </select>
+      </div>
+      <button type="submit" click="onCreateTask()">Create Task</button>
+    </form>
+    <!-- Display error messages here if needed -->
+  </div>
+
+
+
